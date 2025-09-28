@@ -1,0 +1,127 @@
+1. Player Metadata
+	player_id (UUID)
+	signup_date
+	country/region
+	device_type (Android / IOS)
+	preferred_lang (default = En)
+	account_level (default = 1)
+	last_login
+
+	player_coins
+	player_coins_spent
+	daily_login_streak
+	total_time_played
+	
+Auth
+	player_username
+	player_password
+	last_password
+	last_password_changed
+	player_email
+
+2. Session Metadata
+	session_id (UUID)
+	player_id
+	timestamp_start
+	timestamp_end
+	session_duration_seconds
+	
+	transaction_made
+	ads_watched
+	
+	
+
+3. Gameplay Metadata
+	level_id (UUID)
+	attempt_number
+	level_start_time
+	level_end_time
+	level_outcome
+	score
+	stars_earned
+	remaining_time
+
+	moves_made
+	booster_used
+	
+	coins_earned_level
+	coins_spent_level
+
+
+===============================================================================
+
+Generalized Telemetry Data for Match-3 / Puzzle Games
+1. Session Metadata
+
+player_id
+
+session_id
+
+device_info (OS, app version, network type)
+
+session_start, session_end
+
+total_session_time
+
+2. Level Progression
+
+level_id
+
+attempt_number (1st try, 2nd try, etc.)
+
+level_start_time, level_end_time
+
+level_outcome (win/lose)
+
+score
+
+stars_earned (1–3)
+
+remaining_moves or remaining_time
+
+3. Gameplay Events
+
+moves_made (count per level)
+
+special_items_created (color bomb, rocket, etc.)
+
+boosters_used (type + count)
+
+powerups_acquired (from rewards, gifts, etc.)
+
+obstacles_cleared (jellies, blockers, etc.)
+
+4. Economy / Monetization
+
+coins_earned
+
+coins_spent
+
+boosters_purchased (currency type: soft/hard)
+
+extra_moves_purchased (yes/no)
+
+5. Engagement & Retention
+
+daily_login_streak
+
+ads_watched (count, type: rewarded / interstitial)
+
+time_between_sessions
+
+social_interactions (lives sent/received, leaderboard position)
+
+✅ This generalized telemetry is enough to:
+
+Track player progression (levels, retries, wins/losses).
+
+Analyze engagement (session time, streaks, retries).
+
+Monitor monetization behavior (booster use, purchases).
+
+Feed ML models for churn prediction, difficulty balancing, and personalization.
+	
+
+	
+
+	
